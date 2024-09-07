@@ -1,0 +1,13 @@
+{
+  "name": "coding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "yarn node --experimental-vm-modules $(yarn bin jest)"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
