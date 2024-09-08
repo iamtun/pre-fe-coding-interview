@@ -1,4 +1,14 @@
 /**
+ * Phân tích: Yêu cầu đề bài cho là tìm phần tử nhỏ nhất trong mảng dựa trên giá trị trả về của hàm iteratee
+ * Các trường hợp cần xem sét:
+ * - Đầu tiên cần phải xử lý mảng với kết quả trả về của hàm iteratee là null hoặc undefined
+ * - Nếu mảng = 0 => undefined
+ * - Nếu mảng = 1 => min chính là phần tử đầu tiên
+ * - Nếu mảng = 2 => so sánh giá trị sau khi thực thi hàm
+ * - Nếu mảng >= 2 => dùng vòng lặp để tìm phần tử nhỏ nhất
+ */
+
+/**
  *
  * @param {*} array
  * @param {*} iteratee
@@ -14,15 +24,6 @@
  *
  */
 
-/**
- * Phân tích: Yêu cầu đề bài cho là tìm phần tử nhỏ nhất trong mảng dựa trên giá trị trả về của hàm iteratee
- * Các trường hợp cần xem sét:
- * - Đầu tiên cần phải xử lý mảng với kết quả trả về của hàm iteratee là null hoặc undefined
- * - Nếu mảng = 0 => undefined
- * - Nếu mảng = 1 => min chính là phần tử đầu tiên
- * - Nếu mảng = 2 => so sánh giá trị sau khi thực thi hàm
- * - Nếu mảng >= 2 => dùng vòng lặp để tìm phần tử nhỏ nhất
- */
 export default function minBy(array, iteratee) {
   const arrayWithIterateeReturnValid = array.filter((val) => {
     const iterVal = iteratee(val);
